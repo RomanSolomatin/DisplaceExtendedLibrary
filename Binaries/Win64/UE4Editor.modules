@@ -1,0 +1,9 @@
+{
+	"Changelist" : 3249277,
+	"CompatibleChangelist" : 3195953,
+	"BuildId" : "5c2cf03e-b661-4500-ac16-4f608d5be138",
+	"Modules" : 
+	{
+		"DisplaceExtendedLibrary" : "UE4Editor-DisplaceExtendedLibrary.dll"
+	}
+}

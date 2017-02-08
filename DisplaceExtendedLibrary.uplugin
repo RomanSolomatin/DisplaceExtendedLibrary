@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Displace Media Extended Library",
+	"Description": "Extends the blueprint functionality of Unreal Engine",
+	"Category": "Blueprints",
+	"CreatedBy": "Displace Media LLC",
+	"CreatedByURL": "www.displacemedia.com",
+	"DocsURL": "www.displacemedia.com",
+	"MarketplaceURL": "www.displacemedia.com",
+	"SupportURL": "www.displacemedia.com",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "DisplaceExtendedLibrary",
+			"Type": "Developer",
+			"LoadingPhase": "Default"
+		}
+	]
+}
