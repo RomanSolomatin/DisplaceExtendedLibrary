@@ -207,5 +207,5 @@ UFUNCTION(BlueprintCallable, Category = "Displace Media|AI|Perception")
 static void SetSightRadius(UAIPerceptionComponent* PerceptionComponent, float SightRadius, float LoseSightRadius);
 
 UFUNCTION(BlueprintCallable, Category = "Displace Media|AI|Perception")
-static void GetSightRadius(UAIPerceptionComponent* PerceptionComponent, bool& Successful, float& SightRadius, float&LoseSightRadius);
+static void GetSightRadius(UAIPerceptionComponent* PerceptionComponent, bool& Successful, float& SightRadius, float& LoseSightRadius);
 };
