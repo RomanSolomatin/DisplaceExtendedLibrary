@@ -332,11 +332,7 @@ FRotator UDisplaceExtendedLibraryBPLibrary::ZeroRot(FRotator StartingRotation, b
 	SensesConfig = AIPerceptionComponent->SensesConfig;
 } */
 
-
-
-
-
-void UDisplaceExtendedLibraryBPLibrary::SetSightRadius(UAIPerceptionComponent* PerceptionComponent, float NewRange)
+void UDisplaceExtendedLibraryBPLibrary::SetSightRadius(UAIPerceptionComponent* PerceptionComponent, float SightRadius, float LoseSightRadius)
 {
 	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
 
@@ -353,19 +349,14 @@ void UDisplaceExtendedLibraryBPLibrary::SetSightRadius(UAIPerceptionComponent* P
 		return;
 
 	auto ConfigSight = Cast<UAISenseConfig_Sight>(Config);
-
-	// Save original lose range
-	float LoseRange = ConfigSight->LoseSightRadius - ConfigSight->SightRadius;
-
-	ConfigSight->SightRadius = NewRange;
-
-	// Apply lose range to new radius of the sight
-	ConfigSight->LoseSightRadius = ConfigSight->SightRadius + LoseRange;
+	
+	ConfigSight->SightRadius = SightRadius;
+	ConfigSight->LoseSightRadius = LoseSightRadius;
 
 	PerceptionComponent->RequestStimuliListenerUpdate();
 }
 
-void UDisplaceExtendedLibraryBPLibrary::GetSightRadius(UAIPerceptionComponent* PerceptionComponent, bool& Successful, float& SightRadius, float&LoseSightRadius)
+void UDisplaceExtendedLibraryBPLibrary::GetSightRadius(UAIPerceptionComponent* PerceptionComponent, bool& Successful, float& SightRadius, float& LoseSightRadius)
 {
 	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
 
