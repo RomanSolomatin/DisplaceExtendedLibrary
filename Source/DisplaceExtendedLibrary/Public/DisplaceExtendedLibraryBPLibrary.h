@@ -204,10 +204,10 @@ static FRotator ZeroRot(FRotator StartingRotation, bool X, bool Y, bool Z);
 void GetSensesConfig(UAIPerceptionComponent* AIPerceptionComponent, TArray<UAISenseConfig*>& SensesConfig); */
 
 UFUNCTION(BlueprintCallable, Category = "Displace Media|AI|Perception")
-static void SetSightRadius(UAIPerceptionComponent* PerceptionComponent, float NewRange);
+static void SetSightRadius(UAIPerceptionComponent* PerceptionComponent, float NewRadius);
 
 UFUNCTION(BlueprintCallable, Category = "Displace Media|AI|Perception")
-static void SetLoseSightRadius(UAIPerceptionComponent* PerceptionComponent, float NewRange);
+static void SetLoseSightRadius(UAIPerceptionComponent* PerceptionComponent, float NewRadius);
 
 UFUNCTION(BlueprintCallable, Category = "Displace Media|AI|Perception")
 static void GetSightRadius(UAIPerceptionComponent* PerceptionComponent, bool& Successful, float& SightRadius, float&LoseSightRadius);
