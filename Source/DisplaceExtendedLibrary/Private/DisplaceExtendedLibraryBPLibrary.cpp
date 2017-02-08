@@ -335,8 +335,8 @@ FRotator UDisplaceExtendedLibraryBPLibrary::ZeroRot(FRotator StartingRotation, b
 
 
 
-//void UDisplaceExtendedLibraryBPLibrary::ChangePerceptionRadius(AAIController* AIController, float NewRange)
-void UDisplaceExtendedLibraryBPLibrary::ChangePerceptionSightRadius(UAIPerceptionComponent* PerceptionComponent, float NewRange)
+
+void UDisplaceExtendedLibraryBPLibrary::SetSightRadius(UAIPerceptionComponent* PerceptionComponent, float NewRange)
 {
 	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
 
@@ -365,7 +365,7 @@ void UDisplaceExtendedLibraryBPLibrary::ChangePerceptionSightRadius(UAIPerceptio
 	PerceptionComponent->RequestStimuliListenerUpdate();
 }
 
-void UDisplaceExtendedLibraryBPLibrary::GetPerceptionSightRadius(UAIPerceptionComponent* PerceptionComponent, bool& Successful, float& SightRadius, float&LoseSightRadius)
+void UDisplaceExtendedLibraryBPLibrary::GetSightRadius(UAIPerceptionComponent* PerceptionComponent, bool& Successful, float& SightRadius, float&LoseSightRadius)
 {
 	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
 
